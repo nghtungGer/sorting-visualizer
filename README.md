@@ -1,35 +1,37 @@
-# Sorting Visualizer
+🚀 Sorting Visualizer
 
-An interactive web application that visualizes popular sorting algorithms in real-time. Built with **React** and **Tailwind CSS**, this project makes it easy to understand how different sorting techniques work step-by-step.
+A lightweight web app to visualize how sorting algorithms work step by step.
+Built with React + Tailwind CSS, focusing on clarity, performance, and user interaction.
 
-## Features
+✨ Highlights
 
-- **Real-time Visualization**: Watch algorithms sort arrays dynamically.
-- **Smooth Animations**: Powered by `requestAnimationFrame` for optimal performance.
-- **Interactive Controls**: Generate new arrays, adjust animation speed, and switch between algorithms.
-- **Color-Coded Steps**: Clearly distinguish between comparing, swapping, and pivot elements.
-
-## Supported Algorithms
+Real-time algorithm visualization
+Smooth animation using requestAnimationFrame
+Adjustable speed & dynamic array generation
+Clean UI with intuitive controls
+🧠 Algorithms Implemented
 
 Bubble Sort
 Selection Sort
 Insertion Sort
 Quick Sort
 
-## Color Legend
+🎮 Usage Flow
 
-The visualizer uses color coding to help you understand what's happening at each step:
-- 🔵 **Blue**: Default / Unsorted element
-- 🟡 **Yellow**: Currently being compared
-- 🔴 **Red**: Being swapped / moved
-- 🟣 **Purple**: Key element (e.g., current minimum or insertion key)
-- ⚪ **White Border**: Pivot element (used in Quick Sort)
+Generate a random array
+Choose an algorithm
+Adjust speed
+Start sorting and observe each step visually
 
-## Tech Stack
+🛠 Tech Stack
 
-- **Framework**: React (bootstrapped with Vite)
-- **Styling**: Tailwind CSS
-- **Logic**: Vanilla JavaScript
-- **Animation**: `requestAnimationFrame` + `setTimeout` for speed control
+React (Vite)
+Tailwind CSS
+JavaScript
 
-## Author
+🎯 Purpose
+
+Designed as a learning tool to better understand sorting algorithms through visualization.
+
+👤 Author
+Tung Hoang - Software Engineering Student
