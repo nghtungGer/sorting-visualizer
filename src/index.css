@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply selection:bg-cyan-400/30 selection:text-cyan-100;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-slate-100;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    @apply font-bold;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-2.5 font-semibold rounded-lg shadow-md transition-all duration-200 transform text-sm uppercase tracking-wide;
+    @apply bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white;
+    @apply hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105;
+    @apply disabled:bg-slate-600 disabled:cursor-not-allowed disabled:text-slate-400 disabled:scale-100;
+  }
+
+  .btn-success {
+    @apply px-8 py-2.5 font-bold text-lg rounded-lg shadow-lg transition-all duration-200 transform uppercase tracking-wide;
+    @apply bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white;
+    @apply hover:shadow-xl hover:shadow-green-500/50 hover:scale-105;
+    @apply disabled:bg-slate-600 disabled:cursor-not-allowed disabled:text-slate-400 disabled:scale-100;
+  }
+
+  .card {
+    @apply bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-lg p-4 shadow-lg;
+  }
+
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+    @apply bg-slate-700/40 text-slate-200 border border-slate-600/50;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(6, 182, 212, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-out;
+  }
+}
+
+/* Responsive Typography */
+@layer base {
+  @media (max-width: 768px) {
+    body {
+      @apply text-sm;
+    }
+
+    h1 {
+      @apply text-2xl;
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+  @apply bg-slate-900/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
