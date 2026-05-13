@@ -4,4 +4,4 @@ It can also serve as a reference for learning React fundamentals, animation hand
 
 Author
 
-Tung Hoang - Software Engineering Student
+Tung Hoang, Duc Manh - Software Engineering Student
